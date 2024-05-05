@@ -46,7 +46,7 @@ const CarCard = ({ car }) => {
           <Card.Text>{car?.model}</Card.Text>
           <Card.Title className="mb-3">Rp {car?.rent_day} / hari</Card.Title>
           <div className="mb-2">
-            <Image className="me-2" src="public/fi_clock.png" alt="" />
+            <Image className="me-2" src="/fi_clock.png" alt="" />
             {car?.updatedAt}
           </div>
           <Row className="mt-auto">
@@ -59,7 +59,7 @@ const CarCard = ({ car }) => {
                 }}
                 variant="light"
               >
-                <Image src="public/fi_trash-2.png" alt="" />
+                <Image src="/fi_trash-2.png" alt="" />
                 Delete
               </Button>
             </Col>
@@ -71,7 +71,7 @@ const CarCard = ({ car }) => {
                 style={{ backgroundColor: "#5cb85f" }}
                 variant="outline-none"
               >
-                <Image src="public/fi_edit.png" alt="" />
+                <Image src="/fi_edit.png" alt="" />
                 Edit
               </Button>
             </Col>
@@ -83,7 +83,7 @@ const CarCard = ({ car }) => {
         <Modal.Body>
           <Row className="justify-content-center">
             <Image
-              src="public/img-BeepBeep.png"
+              src="/img-BeepBeep.png"
               alt=""
               style={{ width: "50%" }}
             />

@@ -28,7 +28,7 @@ const Home = () => {
                 className="btn text-white d-flex align-items-center"
                 style={{ backgroundColor: "#0d28a6" }}
               >
-                <img src="public/fi_plus.png" alt="" />
+                <img src="/fi_plus.png" alt="" />
                 Add New Car
               </Button>
             </Col>
