@@ -113,6 +113,7 @@ const CarDetail = () => {
                     <Form.Group className="mb-3" controlId="model">
                       <Form.Label>Model</Form.Label>
                       <Form.Control
+                        required
                         type="text"
                         value={model}
                         onChange={(e) => setModel(e.target.value)}
@@ -121,6 +122,7 @@ const CarDetail = () => {
                     <Form.Group className="mb-3" controlId="year">
                       <Form.Label>Year</Form.Label>
                       <Form.Control
+                        required
                         type="number"
                         value={year}
                         onChange={(e) => setYear(e.target.value)}
@@ -129,6 +131,7 @@ const CarDetail = () => {
                     <Form.Group className="mb-3" controlId="capacity">
                       <Form.Label>Capacity</Form.Label>
                       <Form.Control
+                        required
                         type="number"
                         value={capacity}
                         onChange={(e) => setCapacity(e.target.value)}
@@ -161,6 +164,7 @@ const CarDetail = () => {
                     <Form.Group className="mb-3" controlId="rent_day">
                       <Form.Label>Rent Per Day</Form.Label>
                       <Form.Control
+                        required
                         type="number"
                         value={rent_day}
                         onChange={(e) => setRentDay(e.target.value)}
@@ -218,6 +222,7 @@ const CarDetail = () => {
                     >
                       <Form.Label>Description</Form.Label>
                       <Form.Control
+                        required
                         as="textarea"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
@@ -227,6 +232,7 @@ const CarDetail = () => {
                     <Form.Group controlId="image" className="mb-3">
                       <Form.Label>Car Image</Form.Label>
                       <Form.Control
+                        required
                         type="file"
                         onChange={(e) => setImage(e.target.files[0])}
                       />
