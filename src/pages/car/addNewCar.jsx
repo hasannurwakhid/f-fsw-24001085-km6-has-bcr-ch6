@@ -32,9 +32,7 @@ const AddNewCar = () => {
   const manufactureData = useSelector(
     (state) => state.manufacture.manufactures
   );
-
   const typeData = useSelector((state) => state.type.types);
-
   const transmissionData = useSelector(
     (state) => state.transmission.transmissions
   );
