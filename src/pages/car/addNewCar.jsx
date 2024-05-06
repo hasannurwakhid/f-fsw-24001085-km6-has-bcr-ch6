@@ -86,6 +86,13 @@ const AddNewCar = () => {
             <Form onSubmit={onSubmit}>
               <>
                 <div className="mt-4">
+                  {image && (
+                    <img
+                      src={URL.createObjectURL(image)}
+                      className="img-fluid col-12 mt-2 mb-4 rounded"
+                      alt="Car Preview"
+                    />
+                  )}
                   <Form.Group className="mb-3" controlId="model">
                     <Form.Label>Model</Form.Label>
                     <Form.Control
@@ -197,13 +204,6 @@ const AddNewCar = () => {
                       onChange={(e) => setImage(e.target.files[0])}
                     />
                   </Form.Group>
-                  {image && (
-                    <img
-                      src={URL.createObjectURL(image)}
-                      className="img-fluid col-12 mt-2 mb-4 rounded"
-                      alt="Car Preview"
-                    />
-                  )}
                   <Button
                     className="me-3"
                     variant="secondary"

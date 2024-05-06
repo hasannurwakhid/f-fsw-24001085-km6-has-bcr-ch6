@@ -71,7 +71,7 @@ const CarDetail = () => {
   }, [dispatch, id, navigate]);
 
   useEffect(() => {
-    if(car){
+    if (car) {
       setModel(car.model);
       setRentDay(car.rent_day);
       setYear(car.year);
@@ -110,6 +110,21 @@ const CarDetail = () => {
               ) : (
                 <>
                   <div className="mt-4">
+                    {image && typeof image === "string" ? (
+                      <img
+                        src={image}
+                        className="img-fluid col-12 mt-2 mb-4 rounded"
+                        alt="Car Preview"
+                      />
+                    ) : (
+                      image && (
+                        <img
+                          src={URL.createObjectURL(image)}
+                          className="img-fluid col-12 mt-2 mb-4 rounded"
+                          alt="Car Preview"
+                        />
+                      )
+                    )}
                     <Form.Group className="mb-3" controlId="model">
                       <Form.Label>Model</Form.Label>
                       <Form.Control
@@ -237,21 +252,6 @@ const CarDetail = () => {
                         onChange={(e) => setImage(e.target.files[0])}
                       />
                     </Form.Group>
-                    {image && typeof image === "string" ? (
-                      <img
-                        src={image}
-                        className="img-fluid col-12 mt-2 mb-4 rounded"
-                        alt="Car Preview"
-                      />
-                    ) : (
-                      image && (
-                        <img
-                          src={URL.createObjectURL(image)}
-                          className="img-fluid col-12 mt-2 mb-4 rounded"
-                          alt="Car Preview"
-                        />
-                      )
-                    )}
                     <Button
                       className="me-3"
                       variant="secondary"
