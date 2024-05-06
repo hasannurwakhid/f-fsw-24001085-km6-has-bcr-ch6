@@ -71,32 +71,16 @@ const CarDetail = () => {
   }, [dispatch, id, navigate]);
 
   useEffect(() => {
-    {
-      car && setModel(car.model);
-    }
-    {
-      car && setRentDay(car.rent_day);
-    }
-    {
-      car && setYear(car.year);
-    }
-    {
-      car && setCapacity(car.capacity);
-    }
-    {
-      car && setDescription(car.description);
-    }
-    {
-      car && setManufacture(car.manufacture_id);
-    }
-    {
-      car && setType(car.type_id);
-    }
-    {
-      car && setTransmission(car.transmission_id);
-    }
-    {
-      car && setImage(car.image);
+    if(car){
+      setModel(car.model);
+      setRentDay(car.rent_day);
+      setYear(car.year);
+      setCapacity(car.capacity);
+      setDescription(car.description);
+      setManufacture(car.manufacture_id);
+      setType(car.type_id);
+      setTransmission(car.transmission_id);
+      setImage(car.image);
     }
   }, [car]);
 
